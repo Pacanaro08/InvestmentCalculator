@@ -1,1 +1,5 @@
-<h1 class="center">Practice Time!</h1>
+<app-header />
+<app-user-input (data)="onSubmit($event)"/>
+@if (finalData.length > 0) {
+    <app-investment-result [investmentResult]="finalData" />
+}

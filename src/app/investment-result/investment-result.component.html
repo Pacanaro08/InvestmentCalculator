@@ -1,0 +1,22 @@
+<section>
+  <table>
+    <thead>
+      <th>Year</th>
+      <th>Investment Value</th>
+      <th>Interest (Year)</th>
+      <th>Total Interest</th>
+      <th>Invested Capital</th>
+    </thead>
+    <tbody>
+      @for (investment of investmentResult; track $index) {
+      <tr>
+        <td>{{ investment.year | currency}}</td>
+        <td>{{ investment.interest | currency }}</td>
+        <td>{{ investment.annualInvestment | currency }}</td>
+        <td>{{ investment.totalInterest | currency }}</td>
+        <td>{{ investment.totalAmountInvested | currency }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</section>
