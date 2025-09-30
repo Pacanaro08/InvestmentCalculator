@@ -2,13 +2,11 @@
 // e.g., integrate it into a service or component
 // You may need to tweak it, depending on where and how you use it
 
-import { InvestmentData } from "./app/investment-result/investment-result.model";
+import { InvestmentData } from './app/investment-result/investment-result.model';
 
 export function calculateInvestmentResults(investmentData: InvestmentData) {
-  const initialInvestment = investmentData.initialInvestment
-  const annualInvestment = investmentData.annualInvestment
-  const expectedReturn = investmentData.expectedReturn
-  const duration = investmentData.duration
+  const { initialInvestment, annualInvestment, expectedReturn, duration } =
+    investmentData;
 
   const annualData = [];
   let investmentValue = initialInvestment;
